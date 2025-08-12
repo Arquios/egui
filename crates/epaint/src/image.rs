@@ -301,7 +301,7 @@ impl FontImage {
     /// If you are having problems with text looking skinny and pixelated, try using a low gamma, e.g. `0.4`.
     #[inline]
     pub fn srgba_pixels(&self, gamma: Option<f32>) -> impl ExactSizeIterator<Item = Color32> + '_ {
-        let gamma = gamma.unwrap_or(0.65); // TODO(emilk): this default coverage gamma is a magic constant, chosen by eye. I don't even know why we need it.
+        let gamma = gamma.unwrap_or(0.60); // TODO(emilk): this default coverage gamma is a magic constant, chosen by eye. I don't even know why we need it.
         self.pixels.iter().map(move |coverage| {
             let alpha = coverage.powf(gamma);
             // We want to multiply with `vec4(alpha)` in the fragment shader:
