@@ -9,7 +9,7 @@ pub use touch_state::MultiTouchInfo;
 use touch_state::TouchState;
 
 /// If the pointer moves more than this, it won't become a click (but it is still a drag)
-const MAX_CLICK_DIST: f32 = 23.0; // TODO(emilk): move to settings
+const MAX_CLICK_DIST: f32 = 55.0; // TODO(emilk): move to settings
 
 /// If the pointer is down for longer than this it will no longer register as a click.
 ///
