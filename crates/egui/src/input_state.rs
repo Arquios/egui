@@ -9,7 +9,7 @@ pub use touch_state::MultiTouchInfo;
 use touch_state::TouchState;
 
 /// If the pointer moves more than this, it won't become a click (but it is still a drag)
-const MAX_CLICK_DIST: f32 = 15.0; // TODO(emilk): move to settings
+const MAX_CLICK_DIST: f32 = 23.0; // TODO(emilk): move to settings
 
 /// If the pointer is down for longer than this it will no longer register as a click.
 ///
@@ -17,7 +17,7 @@ const MAX_CLICK_DIST: f32 = 15.0; // TODO(emilk): move to settings
 /// then it will register as a "long-touch" which is equivalent to a secondary click.
 ///
 /// This is to support "press and hold for context menu" on touch screens.
-const MAX_CLICK_DURATION: f64 = 3.0; // TODO(emilk): move to settings
+const MAX_CLICK_DURATION: f64 = 2.0; // TODO(emilk): move to settings
 
 /// The new pointer press must come within this many seconds from previous pointer release
 const MAX_DOUBLE_CLICK_DELAY: f64 = 0.3; // TODO(emilk): move to settings
